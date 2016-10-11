@@ -1,9 +1,12 @@
-# Riddiford and Schlosser 2016
+# Pipeline for Riddiford and Schlosser 2016
 
-# 1. Run fastqc to visually inspect all sequencing results
-# Run as perl script:
+Please cite Riddiford and Schlosser 2016 eLife (https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
-#!/usr/bin/perl
+# Run fastqc to visually inspect all sequencing results
+
+
+```{perl}
+\#!/usr/bin/perl
 use warnings;
 use strict;
 use feature qw(say);
@@ -15,6 +18,7 @@ while (<FILES>) {
 	say "Parsing $file...";
 	system ("fastq_quality_trimmer -t 30 -l 75 -i $file -o $file.fastq");
 }
+```
 
 # 2. Run Trimmomatic to quality filter reads:
 
