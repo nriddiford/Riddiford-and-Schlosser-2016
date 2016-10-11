@@ -12,7 +12,7 @@ use autodie;
 ##############
 
 # This program will take N blast hit results and output those genes which are found to be overlapping in $n conditions.
-# The test data be run as follows: perl overlapping.pl control.txt six.txt six-eya.txt eya.txt
+# The test data be run as follows: perl DE_sig.pl control.txt six.txt six-eya.txt eya.txt
 
 # This progeram can be used to generate various gene lists:
 
