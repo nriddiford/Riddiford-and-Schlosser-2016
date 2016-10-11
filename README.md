@@ -1,6 +1,6 @@
 # Bioinformatic pipeline for Riddiford and Schlosser 2016
 
-Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use any scripts developed in this pipeline for data analysis
+Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) if you use any scripts developed in this pipeline for data analysis
 
 # Table of Contents
 
