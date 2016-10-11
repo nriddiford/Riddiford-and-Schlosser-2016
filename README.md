@@ -4,17 +4,17 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 
 ## Table of Contents
 
-* [Trimming and mapping](##Trimming-and-mapping)
-  * [FastQC](####Fastqc)
-  * [Trimmomatic](####Trimmomatic)
-  * [Tophat](####Tophat)
-* [Transcript assembly and differential expression analysis](##Transcript-assembly-and-differential-expression-analysis)
-  * [Cufflinks](####Assemble-transcripts-and-calcuulate-abundance-estimation-with-**Cufflinks**)
-  * [Cuffmerge](####Merge-assemblies-using-**Cuffmerge**)
-  * [Cuffdiff](####Differential-expression-using-**Cuffdiff**)
-* [Estimating variance between biological replicates](##Estimating-variance-between-biological-replicates)
+* [Trimming and mapping](#Trimming-and-mapping)
+  * [FastQC](#Fastqc)
+  * [Trimmomatic](#Trimmomatic)
+  * [Tophat](#Tophat)
+* [Transcript assembly and differential expression analysis](#Transcript-assembly-and-differential-expression-analysis)
+  * [Cufflinks](#Assemble-transcripts-and-calcuulate-abundance-estimation-with-**Cufflinks**)
+  * [Cuffmerge](#Merge-assemblies-using-**Cuffmerge**)
+  * [Cuffdiff](#Differential-expression-using-**Cuffdiff**)
+* [Estimating variance between biological replicates](#Estimating-variance-between-biological-replicates)
   
-##Trimming and mapping 
+## Trimming and mapping 
 
 #### Run **fastqc** to visually inspect all sequencing results
 
