@@ -23,6 +23,7 @@ while (<FILES>) {
 ```
 
 ## Run Trimmomatic to quality filter reads
+
 'filter\_set' contains list of primer sequences to exclude
 
 ```{java}
@@ -34,6 +35,7 @@ ILLUMINACLIP:<filter_set> \
 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 ```
 ## Build bowtie index
+
 Run in same directory as genome.fasta file
 ```
 bowtie2-build <genome.fasta>
@@ -43,31 +45,31 @@ bowtie2-build <genome.fasta>
 
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
+
 ## Get stats for run and rename .bam file
 ```cd <output_dir>```
 ```samtools flagstat accepted_hits.bam > stats.txt```
 ```mv accepted_hits.bam <condition.rep.bam>```
 
-
 ## Assemble transcripts and calcuulate abundance estimation with Cufflinks
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
-# 6. Merge assemblies using cuffmerge
+## Merge assemblies using cuffmerge
 
-ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> \
-<condition_n/transcripts.gtf> > assemblies.txt
+```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
+```cuffmerge assemblies.txt```
 
-cuffmerge assemblies.txt
+## Differential expression using Cuffdiff
 
-# 7. Differential expression with Cuffdiff
-
+```
 cd <cufflinks_output_dir> \
 cuffdiff -p 12 \
 -o <cufflinks_output_dir/diff_out> \
 -b <bowtie-index/.fasta> \
 -L <L1,L2> <merged.gtf> <L1_rep1.bam>,<L1_rep2.bam> <L2_rep1.bam>,<L2_rep2.bam>
- 
+````
+
 # 8. Estimating variance between biological replicates
 # run pearsons.pl 
 
