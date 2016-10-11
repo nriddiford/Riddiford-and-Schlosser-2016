@@ -23,7 +23,7 @@ while (<FILES>) {
 }
 ```
 
-Run Trimmomatic to quality filter reads
+Run **Trimmomatic** to quality filter reads
 
 `filter_set` contains list of primer sequences to exclude
 
@@ -35,19 +35,20 @@ java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmoma
 ILLUMINACLIP:<filter_set> \
 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 ```
-## Build bowtie index
+
+Build bowtie index
 
 Run in same directory as `genome.fasta` file
 ```
 bowtie2-build <genome.fasta>
 ```
 
-## Run Tophat2 on each set of paired reads
+Run **Tophat2** on each set of paired reads
 
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
 
-### Get stats for run and rename .bam file
+Get stats for run and rename .bam file
 
 ```cd <output_dir>```
 
@@ -57,16 +58,16 @@ bowtie2-build <genome.fasta>
 
 # Transcript assembly and differential expression analysis
 
-## Assemble transcripts and calcuulate abundance estimation with Cufflinks
+Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
-## Merge assemblies using cuffmerge
+Merge assemblies using **cuffmerge**
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
 ```cuffmerge assemblies.txt```
 
-## Differential expression using Cuffdiff
+Differential expression using **Cuffdiff**
 
 ```
 cd <cufflinks_output_dir> \
@@ -78,28 +79,28 @@ cuffdiff -p 12 \
 
 # Estimating variance between biological replicates
 
-Run `pearsons.pl` from same directory as Cuffdiff output file `genes.read_group_tracking`
+Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
 
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
 # Annotating transcript models
 
-Run `transcripts.pl`
+Run **transcripts.pl** from same directory as `merged.gtf`
 
-This script will read in exonic positions from cufflinks output file 'merged.gtf' and relate then to genomic positions. The program then prints out 
+This script will read in exonic positions from cufflinks output file `merged.gtf` and relate then to genomic positions. The program outputs:
 
  * All transcript variants for a given gene
  * All exons in each gene
  * The longest transcript variant for all assembled genes (numbered by transcript variant)
 
+Run **de.genes.pl**. Will need to moify file locations in script
+
+This script will attach differenital expression info from the cufdiff output file `gene_exp.diff` to transcripts assembled in **transcripts.pl**
 
 
-# Run as perl transcripts.pl in the same directory as 'merged.gtf'
-# run de.genes.pl
+BLAST output from **de_genes.pl** (`de_transcripts_.fa`) against Xenopus mRNA database:
 
-# 9. Annotating transcript models
-# BLAST output ('de_transcripts_.fa') against Xenopus mRNA database:
-
+```
 blastn -db <path_to_Xenopus_DB> \
 -query <de_transcripts_.fa> \
 -num_threads 12 \ 
@@ -108,6 +109,7 @@ blastn -db <path_to_Xenopus_DB> \
 -outfmt "6 qseqid pident sseqid" \
 -task blastn \
 -max_target_seqs 1 | sort -u -k1,1 > <output.txt>
+```
 
 # 9. Annotating transcript models
 # run annotator.pl
