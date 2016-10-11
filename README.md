@@ -4,7 +4,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 
 # Trimming and mapping 
 
-## Run fastqc to visually inspect all sequencing results
+* Run fastqc to visually inspect all sequencing results
 
 Run from the same directory as fasta files. Will output .fastq files with same name
 
@@ -23,7 +23,7 @@ while (<FILES>) {
 }
 ```
 
-## Run Trimmomatic to quality filter reads
+* Run Trimmomatic to quality filter reads
 
 `filter_set` contains list of primer sequences to exclude
 
