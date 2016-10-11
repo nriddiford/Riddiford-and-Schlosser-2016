@@ -2,8 +2,10 @@
 
 Please cite Riddiford and Schlosser 2016 eLife (https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
-# Run fastqc to visually inspect all sequencing results
+## Run fastqc to visually inspect all sequencing results
 
+Run from the same directory as fasta files
+Will output .fastq files with same name
 
 ```{perl}
 #!/usr/bin/perl
@@ -20,30 +22,36 @@ while (<FILES>) {
 }
 ```
 
-# 2. Run Trimmomatic to quality filter reads:
+## Run Trimmomatic to quality filter reads
+'filter\_set' contains list of primer sequences to exclude
 
+```{java}
 java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmomatic.TrimmomaticPE
 -threads 12 \
 -phred33 \
 <pe_1> <pe_2> <paired_output_1> <unpaired_output_1> <paired_output_2> <unpaired_output_2> \
 ILLUMINACLIP:<filter_set> \
 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
-
-# 3. Build bowtie index
-
+```
+## Build bowtie index
+Run in same directory as genome.fasta file
+```
 bowtie2-build <genome.fasta>
+```
 
-# 4. Tophat2 on each set of paired reads
+## Run Tophat2 on each set of paired reads
 
-tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>
-cd <output_dir>
-samtools flagstat accepted_hits.bam > stats.txt
-mv accepted_hits.bam <condition.rep.bam>
 
-# 5. Assemble transcripts and abundance estimation with Cufflinks
+``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
+## Get stats for run and rename .bam file
+```cd <output_dir>```
+```samtools flagstat accepted_hits.bam > stats.txt```
+```mv accepted_hits.bam <condition.rep.bam>```
 
-cufflinks -p 12 -b <bowtie-index> \
--o <ouput_dir> <condition.rep.bam>
+
+## Assemble transcripts and calcuulate abundance estimation with Cufflinks
+
+```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
 # 6. Merge assemblies using cuffmerge
 
