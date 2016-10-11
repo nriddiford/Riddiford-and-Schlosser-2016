@@ -23,7 +23,7 @@ while (<FILES>) {
 
 ## Run Trimmomatic to quality filter reads
 
-`filter\_set` contains list of primer sequences to exclude
+`filter_set` contains list of primer sequences to exclude
 
 ```{java}
 java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmomatic.TrimmomaticPE
@@ -48,7 +48,9 @@ bowtie2-build <genome.fasta>
 ### Get stats for run and rename .bam file
 
 ```cd <output_dir>```
+
 ```samtools flagstat accepted_hits.bam > stats.txt```
+
 ```mv accepted_hits.bam <condition.rep.bam>```
 
 ## Assemble transcripts and calcuulate abundance estimation with Cufflinks
