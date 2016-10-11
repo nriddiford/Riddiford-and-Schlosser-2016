@@ -22,7 +22,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [For single conditions](#for-single-conditions)
   * [For merged conditions](#for-merged-conditions)
 * [Gene Ontology](#gene-ontology-analysis-on-discrete-gene-sets)
-  * [DAVID](#convert-to-human-orthologs)
+  * [DAVID](#david)
 
 
 ## Trimming and mapping 
@@ -207,7 +207,7 @@ Run **sets.pl** to look for common genes between different de gene sets (lists o
 ```perl sets.pl list1 list2 list3```
 
 
-# Convert to Human orthologs
+# DAVID
 
 Blast output (e.g. 'setA') against Human Uniprot DB
 
