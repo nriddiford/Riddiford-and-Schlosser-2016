@@ -2,6 +2,8 @@
 
 Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
+# Trimming and mapping 
+
 ## Run fastqc to visually inspect all sequencing results
 
 Run from the same directory as fasta files. Will output .fastq files with same name
@@ -48,8 +50,12 @@ bowtie2-build <genome.fasta>
 ### Get stats for run and rename .bam file
 
 ```cd <output_dir>```
+
 ```samtools flagstat accepted_hits.bam > stats.txt```
+
 ```mv accepted_hits.bam <condition.rep.bam>```
+
+# Transcript assembly and differential expression analysis
 
 ## Assemble transcripts and calcuulate abundance estimation with Cufflinks
 
@@ -70,11 +76,25 @@ cuffdiff -p 12 \
 -L <L1,L2> <merged.gtf> <L1_rep1.bam>,<L1_rep2.bam> <L2_rep1.bam>,<L2_rep2.bam>
 ````
 
-# 8. Estimating variance between biological replicates
-# run pearsons.pl 
+# Estimating variance between biological replicates
 
-# 9. Annotating transcript models
-# run transcripts.pl
+Run `pearsons.pl` from same directory as Cuffdiff output file `genes.read_group_tracking`
+
+Output can used as input for a standard Pearson's correlation (e.g. in R)
+
+# Annotating transcript models
+
+Run `transcripts.pl`
+
+This script will read in exonic positions from cufflinks output file 'merged.gtf' and relate then to genomic positions. The program then prints out 
+
+ * All transcript variants for a given gene
+ * All exons in each gene
+ * The longest transcript variant for all assembled genes (numbered by transcript variant)
+
+
+
+# Run as perl transcripts.pl in the same directory as 'merged.gtf'
 # run de.genes.pl
 
 # 9. Annotating transcript models
