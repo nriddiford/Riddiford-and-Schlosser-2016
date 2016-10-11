@@ -1,6 +1,4 @@
-###############################
-###        Pipeline         ###
-###############################
+# Riddiford and Schlosser 2016
 
 # 1. Run fastqc to visually inspect all sequencing results
 # Run as perl script:
