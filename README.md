@@ -4,7 +4,8 @@ Please cite Riddiford and Schlosser 2016 eLife (https://elifesciences.org/conten
 
 ## Run fastqc to visually inspect all sequencing results
 
-Run from the same directory as fasta files \n
+Run from the same directory as fasta files
+
 Will output .fastq files with same name
 
 ```{perl}
