@@ -2,12 +2,15 @@
 
 Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
-# Table of Contents
+## Table of Contents
 
-* [Trimming and mapping](#Trimming-and-mapping)
+* [Trimming and mapping](##Trimming-and-mapping)
   * [FastQC](####Fastqc)
+  * [Trimmomatic](####Trimmomatic)
+  * [Tophat](####Tophat)
+* [Transcript assembly and differential expression analysis](##Transcript-assembly-and-differential-expression-analysis)
   
-# Trimming and mapping 
+## Trimming and mapping 
 
 #### Fastqc
 
@@ -30,7 +33,7 @@ while (<FILES>) {
 }
 ```
 
-Run **Trimmomatic** to quality filter reads
+#### Run **Trimmomatic** to quality filter reads
 
 `filter_set` contains list of primer sequences to exclude
 
@@ -50,8 +53,7 @@ Run in same directory as `genome.fasta` file
 bowtie2-build <genome.fasta>
 ```
 
-Run **Tophat2** on each set of paired reads
-
+#### Run **Tophat2** on each set of paired reads
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
 
@@ -63,7 +65,7 @@ Get stats for run and rename .bam file
 
 ```mv accepted_hits.bam <condition.rep.bam>```
 
-# Transcript assembly and differential expression analysis
+## Transcript assembly and differential expression analysis
 
 Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
 
@@ -84,7 +86,7 @@ cuffdiff -p 12 \
 -L <L1,L2> <merged.gtf> <L1_rep1.bam>,<L1_rep2.bam> <L2_rep1.bam>,<L2_rep2.bam>
 ````
 
-# Estimating variance between biological replicates
+## Estimating variance between biological replicates
 
 Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
 
@@ -92,7 +94,7 @@ Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_grou
 
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
-# Annotating transcript models
+## Annotating transcript models
 
 To build transcript models from genome using cufflinks output, run **transcripts.pl** from same directory as `merged.gtf`
 
@@ -129,7 +131,7 @@ Run **annotator.pl**
 
 ```perl annotator.pl <Xenopus blast output> <condition> <de_genes.txt>```
 
-# Gene Enrichment Analysis
+## Gene Enrichment Analysis
 
 To look for gene enrichement between two conditions, run **enrichment.pl**
 
@@ -139,9 +141,9 @@ This script will read in differentially expressed genes (output from **blast.pl*
 
 Perform chi squared test using output from **enrichment.pl** (e.g. use http://www.socscistatistics.com/tests/chisquare/)
 
-# Find co-differentially expressed genes 
+## Find co-differentially expressed genes 
 
-## For single conditions
+### For single conditions
 
 Run **godzilla.pl** for blast output for multiple conditions. 
 "Control" must always be listed first
@@ -154,7 +156,7 @@ Blast output must have the following, tab delimited output:
 This program will take N blast hit results and output those genes which are found to be overlapping in `$n` conditions.
 
 
-## For merged conditions
+### For merged conditions
 
 Run **DE_sig.pl** 
 
