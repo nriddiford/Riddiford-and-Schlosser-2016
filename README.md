@@ -22,7 +22,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [For single conditions](#for-single-conditions)
   * [For merged conditions](#for-merged-conditions)
 * [Gene Ontology](#gene-ontology-analysis-on-discrete-gene-sets)
-  * [DAVID](#blast-output-(e.g.-'seta')-against-human-uniprot-db)
+  * [DAVID](#blast-output-\(e\.g\.\-\'seta\'\)-against-human-uniprot-db)
 
 
 ## Trimming and mapping 
