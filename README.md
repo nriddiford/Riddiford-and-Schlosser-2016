@@ -13,8 +13,13 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [Cuffmerge](#merge-assemblies-using-cuffmerge)
   * [Cuffdiff](#differential-expression-using-cuffdiff)
 * [Estimating variance between biological replicates](#estimating-variance-between-biological-replicates)
+* [Annotating transcript models](#annotating-transcript-models)
+  *[Build transcript models](#build-transcript-models)
   
+
+
 ## Trimming and mapping 
+
 
 ### Run fastqc to visually inspect all sequencing results
 
@@ -34,6 +39,7 @@ while (<FILES>) {
 	system ("fastq_quality_trimmer -t 30 -l 75 -i $file -o $file.fastq");
 }
 ```
+
 
 ### Run Trimmomatic to quality filter reads
 
@@ -55,6 +61,7 @@ Run in same directory as `genome.fasta` file
 bowtie2-build <genome.fasta>
 ```
 
+
 ### Run Tophat2 on each set of paired reads
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
@@ -67,16 +74,20 @@ Get stats for run and rename .bam file
 
 ```mv accepted_hits.bam <condition.rep.bam>```
 
+
 ## Transcript assembly and differential expression analysis
+
 
 #### Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
+
 #### Merge assemblies using **Cuffmerge**
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
 ```cuffmerge assemblies.txt```
+
 
 #### Differential expression using **Cuffdiff**
 
@@ -88,6 +99,7 @@ cuffdiff -p 12 \
 -L <L1,L2> <merged.gtf> <L1_rep1.bam>,<L1_rep2.bam> <L2_rep1.bam>,<L2_rep2.bam>
 ````
 
+
 ## Estimating variance between biological replicates
 
 Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
@@ -96,7 +108,10 @@ Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_grou
 
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
+
 ## Annotating transcript models
+
+### Build transcript models
 
 To build transcript models from genome using cufflinks output, run **transcripts.pl** from same directory as `merged.gtf`
 
@@ -132,6 +147,7 @@ blastn -db <path_to_Xenopus_DB> \
 Run **annotator.pl**
 
 ```perl annotator.pl <Xenopus blast output> <condition> <de_genes.txt>```
+
 
 ## Gene Enrichment Analysis
 
