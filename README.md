@@ -6,7 +6,7 @@ Please cite Riddiford and Schlosser 2016 eLife (https://elifesciences.org/conten
 
 
 ```{perl}
-\#!/usr/bin/perl
+#!/usr/bin/perl
 use warnings;
 use strict;
 use feature qw(say);
