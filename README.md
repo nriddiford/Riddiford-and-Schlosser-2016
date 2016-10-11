@@ -9,12 +9,14 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [Trimmomatic](####Trimmomatic)
   * [Tophat](####Tophat)
 * [Transcript assembly and differential expression analysis](##Transcript-assembly-and-differential-expression-analysis)
+  * [Cufflinks](####Assemble-transcripts-and-calcuulate-abundance-estimation-with-**Cufflinks**)
+  * [Cuffmerge](####Merge-assemblies-using-**Cuffmerge**)
+  * [Cuffdiff](####Differential-expression-using-**Cuffdiff**)
+* [Estimating variance between biological replicates](##Estimating-variance-between-biological-replicates)
   
 ## Trimming and mapping 
 
-#### Fastqc
-
-Run **fastqc** to visually inspect all sequencing results
+#### Run **fastqc** to visually inspect all sequencing results
 
 Run from the same directory as fasta files. Will output .fastq files with same name
 
@@ -67,16 +69,16 @@ Get stats for run and rename .bam file
 
 ## Transcript assembly and differential expression analysis
 
-Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
+#### Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
-Merge assemblies using **Cuffmerge**
+#### Merge assemblies using **Cuffmerge**
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
 ```cuffmerge assemblies.txt```
 
-Differential expression using **Cuffdiff**
+#### Differential expression using **Cuffdiff**
 
 ```
 cd <cufflinks_output_dir> \
