@@ -1,11 +1,10 @@
 # Pipeline for Riddiford and Schlosser 2016
 
-Please cite Riddiford and Schlosser 2016 eLife (https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
+Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
 ## Run fastqc to visually inspect all sequencing results
 
 Run from the same directory as fasta files
-
 Will output .fastq files with same name
 
 ```{perl}
