@@ -7,6 +7,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 * [Trimming and mapping](#trimming-and-mapping)
   * [FastQC](#run-fastqc-to-visually-inspect-all-sequencing-results)
   * [Trimmomatic](#run-trimmomatic-to-quality-filter-reads)
+  * [Bowtie index](#build-bowtie-index)
   * [Tophat](#run-tophat2-on-each-set-of-paired-reads)
 * [Transcript assembly and differential expression analysis](#transcript-assembly-and-differential-expression-analysis)
   * [Cufflinks](#assemble-transcripts-and-calcuulate-abundance-estimation-with-cufflinks)
@@ -25,12 +26,11 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [DAVID](#david)
 
 
+
 # Trimming and mapping 
 
 
 ### Run fastqc to visually inspect all sequencing results
-
-Run from the same directory as fasta files. Will output .fastq files with same name
 
 ```{perl}
 #!/usr/bin/perl
@@ -47,10 +47,10 @@ while (<FILES>) {
 }
 ```
 
+Run from the same directory as fasta files. Will output .fastq files with same name
+
 
 ### Run Trimmomatic to quality filter reads
-
-`filter_set` contains list of primer sequences to exclude
 
 ```{java}
 java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmomatic.TrimmomaticPE
@@ -60,20 +60,23 @@ java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmoma
 ILLUMINACLIP:<filter_set> \
 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 ```
+`filter_set` contains list of primer sequences to exclude
 
-Build bowtie index
 
-Run in same directory as `genome.fasta` file
+### Build bowtie index
+
 ```
 bowtie2-build <genome.fasta>
 ```
+
+Run in same directory as `genome.fasta` file
 
 
 ### Run Tophat2 on each set of paired reads
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
 
-Get stats for run and rename .bam file
+Get stats for run and rename .bam file:
 
 ```cd <output_dir>```
 
@@ -93,6 +96,7 @@ Get stats for run and rename .bam file
 ### Merge assemblies using Cuffmerge
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
+
 ```cuffmerge assemblies.txt```
 
 
@@ -109,9 +113,9 @@ cuffdiff -p 12 \
 
 # Estimating variance between biological replicates
 
-Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
-
 ```perl pearsons.pl```
+
+Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
 
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
@@ -134,7 +138,7 @@ This script will read in exonic positions from cufflinks output file `merged.gtf
 
 ### Add differential expression information
 
-Run **de.genes.pl**. Will need to moify file locations in script
+Run **de.genes.pl**
 
 ```perl de.genes.pl```
 
@@ -200,7 +204,7 @@ Blast output must have the following, tab delimited output:
 ```perl DE_sig.pl control.txt six.txt six-eya.txt eya.txt```
 
 
-# Gene ontology analysis on discrete gene sets
+# Gene Ontology analysis on discrete gene sets
 
 Run **sets.pl** to look for common genes between different de gene sets (lists outputted from **godzilla.pl**)
 
