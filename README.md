@@ -5,13 +5,13 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 ## Table of Contents
 
 * [Trimming and mapping](#Trimming-and-mapping)
-  * [FastQC](#Fastqc)
-  * [Trimmomatic](#Trimmomatic)
-  * [Tophat](#Tophat)
+  * [FastQC](#Run-fastqc-to-visually-inspect-all-sequencing-results)
+  * [Trimmomatic](#Run-Trimmomatic-to-quality-filter-reads)
+  * [Tophat](#Run-Tophat2-on-each-set-of-paired-reads)
 * [Transcript assembly and differential expression analysis](#Transcript-assembly-and-differential-expression-analysis)
-  * [Cufflinks](#Assemble-transcripts-and-calcuulate-abundance-estimation-with-**Cufflinks**)
-  * [Cuffmerge](#Merge-assemblies-using-**Cuffmerge**)
-  * [Cuffdiff](#Differential-expression-using-**Cuffdiff**)
+  * [Cufflinks](#Assemble-transcripts-and-calcuulate-abundance-estimation-with-Cufflinks)
+  * [Cuffmerge](#Merge-assemblies-using-Cuffmerge)
+  * [Cuffdiff](#Differential-expression-using-Cuffdiff)
 * [Estimating variance between biological replicates](#Estimating-variance-between-biological-replicates)
   
 ## Trimming and mapping 
@@ -55,7 +55,7 @@ Run in same directory as `genome.fasta` file
 bowtie2-build <genome.fasta>
 ```
 
-#### Run **Tophat2** on each set of paired reads
+#### Run Tophat2 on each set of paired reads
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
 
