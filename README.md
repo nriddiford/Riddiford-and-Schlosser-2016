@@ -47,11 +47,9 @@ bowtie2-build <genome.fasta>
 
 ### Get stats for run and rename .bam file
 
-```cd <output_dir>```
-
-```samtools flagstat accepted_hits.bam > stats.txt```
-
-```mv accepted_hits.bam <condition.rep.bam>```
+`cd <output_dir>`
+`samtools flagstat accepted_hits.bam > stats.txt`
+`mv accepted_hits.bam <condition.rep.bam>`
 
 ## Assemble transcripts and calcuulate abundance estimation with Cufflinks
 
