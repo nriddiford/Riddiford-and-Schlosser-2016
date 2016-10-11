@@ -2,17 +2,17 @@
 
 Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
-## Table of Contents
+# Table of Contents
 
-* [Trimming and mapping](#Trimming-and-mapping)
-  * [FastQC](#Run-fastqc-to-visually-inspect-all-sequencing-results)
-  * [Trimmomatic](#Run-Trimmomatic-to-quality-filter-reads)
-  * [Tophat](#Run-Tophat2-on-each-set-of-paired-reads)
-* [Transcript assembly and differential expression analysis](#Transcript-assembly-and-differential-expression-analysis)
-  * [Cufflinks](#Assemble-transcripts-and-calcuulate-abundance-estimation-with-Cufflinks)
-  * [Cuffmerge](#Merge-assemblies-using-Cuffmerge)
-  * [Cuffdiff](#Differential-expression-using-Cuffdiff)
-* [Estimating variance between biological replicates](#Estimating-variance-between-biological-replicates)
+* [Trimming and mapping](#trimming-and-mapping)
+  * [FastQC](#run-fastqc-to-visually-inspect-all-sequencing-results)
+  * [Trimmomatic](#run-trimmomatic-to-quality-filter-reads)
+  * [Tophat](#run-tophat2-on-each-set-of-paired-reads)
+* [Transcript assembly and differential expression analysis](#transcript-assembly-and-differential-expression-analysis)
+  * [Cufflinks](#assemble-transcripts-and-calcuulate-abundance-estimation-with-cufflinks)
+  * [Cuffmerge](#merge-assemblies-using-cuffmerge)
+  * [Cuffdiff](#differential-expression-using-cuffdiff)
+* [Estimating variance between biological replicates](#estimating-variance-between-biological-replicates)
   
 ## Trimming and mapping 
 
