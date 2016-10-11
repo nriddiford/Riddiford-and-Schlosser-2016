@@ -1,4 +1,4 @@
-# Pipeline for Riddiford and Schlosser 2016
+# Bioinformatic pipeline for Riddiford and Schlosser 2016
 
 Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) when you use this pipeline for data analysis
 
@@ -14,8 +14,15 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [Cuffdiff](#differential-expression-using-cuffdiff)
 * [Estimating variance between biological replicates](#estimating-variance-between-biological-replicates)
 * [Annotating transcript models](#annotating-transcript-models)
-  *[Build transcript models](#build-transcript-models)
-  
+  * [Build transcript models](#build-transcript-models)
+  * [Add differential expression information](#add-differential-expression-information)
+  * [Annotate](#annotate)
+* [Gene Enrichment Analysis](#gene-enrichment-analysis)
+* [Find co-differentially expressed genes](#find-co-differentially-expressed-genes)
+  * [For single conditions](#for-single-conditions)
+  * [For merged conditions](#for-merged-conditions)
+* [Gene Ontology](#gene-ontology-analysis-on-discrete-gene-sets)
+  * [DAVID](#blast-output-(e.g.-'seta')-against-human-uniprot-db)
 
 
 ## Trimming and mapping 
@@ -78,18 +85,18 @@ Get stats for run and rename .bam file
 ## Transcript assembly and differential expression analysis
 
 
-#### Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
+### Assemble transcripts and calcuulate abundance estimation with Cufflinks
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
 
-#### Merge assemblies using **Cuffmerge**
+### Merge assemblies using Cuffmerge
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
 ```cuffmerge assemblies.txt```
 
 
-#### Differential expression using **Cuffdiff**
+### Differential expression using Cuffdiff
 
 ```
 cd <cufflinks_output_dir> \
@@ -111,6 +118,7 @@ Output can used as input for a standard Pearson's correlation (e.g. in R)
 
 ## Annotating transcript models
 
+
 ### Build transcript models
 
 To build transcript models from genome using cufflinks output, run **transcripts.pl** from same directory as `merged.gtf`
@@ -124,12 +132,16 @@ This script will read in exonic positions from cufflinks output file `merged.gtf
  * The longest transcript variant for all assembled genes (numbered by transcript variant)
 
 
+### Add differential expression information
+
 Run **de.genes.pl**. Will need to moify file locations in script
 
 ```perl de.genes.pl```
 
 This script will attach differenital expression info from the cufdiff output file `gene_exp.diff` to transcripts assembled in **transcripts.pl**
 
+
+### Annotate
 
 BLAST output from **de_genes.pl** (`de_transcripts_.fa`) against Xenopus mRNA database:
 
@@ -159,7 +171,9 @@ This script will read in differentially expressed genes (output from **blast.pl*
 
 Perform chi squared test using output from **enrichment.pl** (e.g. use http://www.socscistatistics.com/tests/chisquare/)
 
+
 ## Find co-differentially expressed genes 
+
 
 ### For single conditions
 
@@ -191,6 +205,7 @@ Blast output must have the following, tab delimited output:
 Run **sets.pl** to look for common genes between different de gene sets (lists outputted from **godzilla.pl**)
 
 ```perl sets.pl list1 list2 list3```
+
 
 # Blast output (e.g. 'setA') against Human Uniprot DB
 
