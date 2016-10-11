@@ -62,7 +62,7 @@ Assemble transcripts and calcuulate abundance estimation with **Cufflinks**
 
 ```cufflinks -p 12 -b <bowtie-index> -o <ouput_dir> <condition.rep.bam>```
 
-Merge assemblies using **cuffmerge**
+Merge assemblies using **Cuffmerge**
 
 ```ls -1 <path/to/cufflinks_output_condition_1/transcripts.gtf> <condition_n/transcripts.gtf> > assemblies.txt ```
 ```cuffmerge assemblies.txt```
@@ -85,13 +85,14 @@ Output can used as input for a standard Pearson's correlation (e.g. in R)
 
 # Annotating transcript models
 
-Run **transcripts.pl** from same directory as `merged.gtf`
+To build transcript models from genome using cufflinks output, run **transcripts.pl** from same directory as `merged.gtf`
 
 This script will read in exonic positions from cufflinks output file `merged.gtf` and relate then to genomic positions. The program outputs:
 
  * All transcript variants for a given gene
  * All exons in each gene
  * The longest transcript variant for all assembled genes (numbered by transcript variant)
+
 
 Run **de.genes.pl**. Will need to moify file locations in script
 
@@ -111,8 +112,7 @@ blastn -db <path_to_Xenopus_DB> \
 -max_target_seqs 1 | sort -u -k1,1 > <output.txt>
 ```
 
-# 9. Annotating transcript models
-# run annotator.pl
+Run annotator.pl
 
 # 10. Gene Enrichment Analysis 
 # run enrichment.pl
