@@ -4,8 +4,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 
 ## Run fastqc to visually inspect all sequencing results
 
-Run from the same directory as fasta files
-Will output .fastq files with same name
+Run from the same directory as fasta files. Will output .fastq files with same name
 
 ```{perl}
 #!/usr/bin/perl
@@ -24,7 +23,7 @@ while (<FILES>) {
 
 ## Run Trimmomatic to quality filter reads
 
-'filter\_set' contains list of primer sequences to exclude
+`filter\_set` contains list of primer sequences to exclude
 
 ```{java}
 java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmomatic.TrimmomaticPE
@@ -36,7 +35,7 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 ```
 ## Build bowtie index
 
-Run in same directory as genome.fasta file
+Run in same directory as `genome.fasta` file
 ```
 bowtie2-build <genome.fasta>
 ```
@@ -46,7 +45,8 @@ bowtie2-build <genome.fasta>
 
 ``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
 
-## Get stats for run and rename .bam file
+### Get stats for run and rename .bam file
+
 ```cd <output_dir>```
 ```samtools flagstat accepted_hits.bam > stats.txt```
 ```mv accepted_hits.bam <condition.rep.bam>```
