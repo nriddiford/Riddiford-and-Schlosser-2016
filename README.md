@@ -14,7 +14,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [Cuffdiff](####Differential-expression-using-**Cuffdiff**)
 * [Estimating variance between biological replicates](##Estimating-variance-between-biological-replicates)
   
-## Trimming and mapping 
+##Trimming and mapping 
 
 #### Run **fastqc** to visually inspect all sequencing results
 
