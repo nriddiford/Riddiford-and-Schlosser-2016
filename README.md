@@ -25,7 +25,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
   * [DAVID](#david)
 
 
-## Trimming and mapping 
+# Trimming and mapping 
 
 
 ### Run fastqc to visually inspect all sequencing results
@@ -82,7 +82,7 @@ Get stats for run and rename .bam file
 ```mv accepted_hits.bam <condition.rep.bam>```
 
 
-## Transcript assembly and differential expression analysis
+# Transcript assembly and differential expression analysis
 
 
 ### Assemble transcripts and calcuulate abundance estimation with Cufflinks
@@ -107,7 +107,7 @@ cuffdiff -p 12 \
 ````
 
 
-## Estimating variance between biological replicates
+# Estimating variance between biological replicates
 
 Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
 
@@ -116,7 +116,7 @@ Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_grou
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
 
-## Annotating transcript models
+# Annotating transcript models
 
 
 ### Build transcript models
@@ -161,7 +161,7 @@ Run **annotator.pl**
 ```perl annotator.pl <Xenopus blast output> <condition> <de_genes.txt>```
 
 
-## Gene Enrichment Analysis
+# Gene Enrichment Analysis
 
 To look for gene enrichement between two conditions, run **enrichment.pl**
 
@@ -172,7 +172,7 @@ This script will read in differentially expressed genes (output from **blast.pl*
 Perform chi squared test using output from **enrichment.pl** (e.g. use http://www.socscistatistics.com/tests/chisquare/)
 
 
-## Find co-differentially expressed genes 
+# Find co-differentially expressed genes 
 
 
 ### For single conditions
@@ -207,7 +207,7 @@ Run **sets.pl** to look for common genes between different de gene sets (lists o
 ```perl sets.pl list1 list2 list3```
 
 
-# DAVID
+### DAVID
 
 Blast output (e.g. 'setA') against Human Uniprot DB
 
