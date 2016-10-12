@@ -43,25 +43,25 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
-[Uninjected PPE explant, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])  
-[Uninjected PPE explant, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701805[accn])  
-[Uninjected PPE explant, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)  
-[Uninjected PPE explant, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])  
+[Uninjected PPE explant, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])  
+[Uninjected PPE explant, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701805[accn])  
+[Uninjected PPE explant, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)  
+[Uninjected PPE explant, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])  
 
-[PPE explanted after Six1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])  
 
-[PPE explanted after Eya1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])  
 
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])  
 
 
 # Trimming and mapping 
