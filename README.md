@@ -43,7 +43,7 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
-[Uninjected PPE explant, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])"\n"
+[Uninjected PPE explant, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])  
 [Uninjected PPE explant, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701805[accn])
 [Uninjected PPE explant, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)
 [Uninjected PPE explant, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])
