@@ -30,7 +30,7 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 # Trimming and mapping 
 
 
-### Run fastqc to visually inspect all sequencing results
+### Run Fastqc to visually inspect all sequencing results
 
 ```{perl}
 #!/usr/bin/perl
@@ -50,7 +50,7 @@ while (<FILES>) {
 Run from the same directory as fasta files. Will output .fastq files with same name
 
 
-### Run Trimmomatic to quality filter reads
+### Run Trimmomatic to quality-filter reads
 
 ```{java}
 java -classpath /path/to/Trimmomatic/trimmomatic-0.25.jar org.usadellab.trimmomatic.TrimmomaticPE
@@ -63,13 +63,13 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 `filter_set` contains list of primer sequences to exclude
 
 
-### Build bowtie index
+### Build Bowtie index
 
 ```
 bowtie2-build <genome.fasta>
 ```
 
-Run in same directory as `genome.fasta` file
+Run in same directory as `genome.fasta` file. For this analysis we used X.laevis genome version [Xl7](http://www.xenbase.org/other/static/ftpDatafiles.jsp)
 
 
 ### Run Tophat2 on each set of paired reads
@@ -146,6 +146,10 @@ This script will attach differenital expression info from the cufdiff output fil
 
 
 ### Annotate
+
+To annotate our transcript models, we purformed a BLAST against a combined Xenopus mRNA database 
+[X. laevis](ftp://ftp.xenbase.org/pub/Genomics/Sequences/xlaevisMRNA.fasta)
+[X. tropicalis](ftp://ftp.xenbase.org/pub/Genomics/Sequences/xtropMRNA.fasta) 
 
 BLAST output from **de_genes.pl** (`de_transcripts_.fa`) against Xenopus mRNA database:
 
