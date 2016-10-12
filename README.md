@@ -3,7 +3,9 @@
 Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e17666) if you use any scripts developed in this pipeline for data analysis
 
 # Table of Contents
-
+* [Data access](#data-access)
+  * [Experimental setup](#experimental-setup)
+  * [Download data](#data-downloads)
 * [Trimming and mapping](#trimming-and-mapping)
   * [FastQC](#run-fastqc-to-visually-inspect-all-sequencing-results)
   * [Trimmomatic](#run-trimmomatic-to-quality-filter-reads)
@@ -25,6 +27,41 @@ Please cite [Riddiford and Schlosser 2016](https://elifesciences.org/content/5/e
 * [Gene Ontology](#gene-ontology-analysis-on-discrete-gene-sets)
   * [DAVID](#david)
 
+
+
+# Data access
+
+
+### Experimental setup
+
+To identify presumptive direct targets of Six1 and Eya1, Six1-GR and Eya1-GR fusion proteins were overexpressed either alone or together in the PPE. In combination with a protein synthesis inhibitor (CHX), nuclear translocation of Six1 and Eya1 was induced by adding DEX for 2.5 hr, and gene expression was analysed using RNA-Seq. Presumptive direct targets of Six1 and Eya1 were determined by comparing Six1-GR-, Eya1-GR- or Six1-GR+Eya1-GR-injected embryos treated with CHX alone (as controls) against CHX+DEX-treated samples.
+
+Please refer to the [methods section](https://elifesciences.org/content/5/e17666) of our paper for full description of experimental setup
+
+
+### Data downloads
+
+The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
+
+[Uninjected PPE explant, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])
+[Uninjected PPE explant, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701805[accn])
+[Uninjected PPE explant, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)
+[Uninjected PPE explant, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])
+
+[PPE explanted from Six1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])
+
+[PPE explanted from Eya1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])
+[PPE explanted from Eya1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])
+[PPE explanted from Eya1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])
+[PPE explanted from Eya1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])
+
+[PPE explanted from Six1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])
+[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])
 
 
 # Trimming and mapping 
