@@ -148,8 +148,10 @@ This script will attach differenital expression info from the cufdiff output fil
 ### Annotate
 
 To annotate our transcript models, we purformed a BLAST against a combined Xenopus mRNA database 
-[X. laevis](ftp://ftp.xenbase.org/pub/Genomics/Sequences/xlaevisMRNA.fasta)
-[X. tropicalis](ftp://ftp.xenbase.org/pub/Genomics/Sequences/xtropMRNA.fasta) 
+
+[X. laevis](ftp://ftp.xenbase.org/pub/genomics/sequences/xlaevismrna.fasta)
+
+[X. tropicalis](ftp://ftp.xenbase.org/pub/genomics/sequences/xtropmrna.fasta) 
 
 BLAST output from **de_genes.pl** (`de_transcripts_.fa`) against Xenopus mRNA database:
 
