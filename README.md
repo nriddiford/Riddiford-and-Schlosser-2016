@@ -48,20 +48,20 @@ The experiments described above, and in greater detail in the [methods section](
 [Uninjected PPE explant, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)  
 [Uninjected PPE explant, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])  
 
-[PPE explanted from Six1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])  
 
-[PPE explanted from Eya1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])  
-[PPE explanted from Eya1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])  
-[PPE explanted from Eya1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])  
-[PPE explanted from Eya1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])  
 
-[PPE explanted from Six1 overexpression embryo, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])  
-[PPE explanted from Six1 overexpression embryo, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX_1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX_2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])  
 
 
 # Trimming and mapping 
@@ -149,8 +149,7 @@ cuffdiff -p 12 \
 
 ```perl pearsons.pl```
 
-Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`
-
+Run **pearsons.pl** from same directory as Cuffdiff output file `genes.read_group_tracking`  
 Output can used as input for a standard Pearson's correlation (e.g. in R)
 
 
@@ -163,8 +162,7 @@ To build transcript models from genome using cufflinks output, run **transcripts
 
 ```perl transcripts.pl```
 
-This script will read in exonic positions from cufflinks output file `merged.gtf` and relate then to genomic positions. The program outputs:
-
+This script will read in exonic positions from cufflinks output file `merged.gtf` and relate then to genomic positions. The program outputs:  
  * All transcript variants for a given gene
  * All exons in each gene
  * The longest transcript variant for all assembled genes (numbered by transcript variant)
@@ -182,7 +180,6 @@ This script will attach differenital expression info from the cufdiff output fil
 ### Annotate
 
 To annotate our transcript models, we purformed a BLAST against a combined (X. laevis and X. tropicalis) [Xenopus mRNA database](http://www.xenbase.org/other/static/ftpDatafiles.jsp)
-
 
 BLAST output from **de_genes.pl** (`de_transcripts_.fa`) against Xenopus mRNA database:
 
@@ -221,7 +218,7 @@ Perform chi squared test using output from **enrichment.pl** (e.g. use http://ww
 Run **godzilla.pl** for blast output for multiple conditions. 
 "Control" must always be listed first
 
-Blast output must have the following, tab delimited output:
+Blast output must have the following, tab delimited output:  
 `gene	XLOC_control.fpkm:expt.fpkm,_Change:FC_val	%id	blast hit`
 
 ```perl godzilla.pl control.txt six.txt six-eya.txt eya.txt```
@@ -235,7 +232,7 @@ Run **DE_sig.pl**
 
 "Control" must always be listed first
 
-Blast output must have the following, tab delimited output:
+Blast output must have the following, tab delimited output:  
 `gene	XLOC_control.fpkm:expt.fpkm,_Change:FC_val	%id	blast hit`
 
 ```perl DE_sig.pl control.txt six.txt six-eya.txt eya.txt```
