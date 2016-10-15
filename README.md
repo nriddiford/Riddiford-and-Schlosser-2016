@@ -41,7 +41,7 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 ### Data downloads
 
-Before downloading the data, download the [summary file](https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4) (which also provides downlaod links) for inspection  
+Before downloading the data, download the [summary file](https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4) (which also provides downlaod links) for inspection.  
 
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
