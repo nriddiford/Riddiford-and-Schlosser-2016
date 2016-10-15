@@ -43,7 +43,7 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 Before downloading the data, download the summary .csv file (which also provides downlaod links) for inspection: 
 
-`https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4`
+```https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4```
 
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
