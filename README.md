@@ -68,26 +68,10 @@ The experiments described above, and in greater detail in the [methods section](
 
 # Trimming and mapping 
 
-
+ 
 ### Run Fastqc to visually inspect all sequencing results
 
-```{perl}
-#!/usr/bin/perl
-use warnings;
-use strict;
-use feature qw(say);
-
-open (FILES, "ls *.txt |");
-while (<FILES>) {
-	chomp;
-	my ($file) = (split)[0];
-	say "Parsing $file...";
-	system ("fastq_quality_trimmer -t 30 -l 75 -i $file -o $file.fastq");
-}
-```
-
-Run from the same directory as fasta files. Will output .fastq files with same name
-
+```fastq_quality_trimmer -t 30 -l 75 -i <input> -o <output>```
 
 ### Run Trimmomatic to quality-filter reads
 
