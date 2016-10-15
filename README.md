@@ -41,27 +41,31 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 ### Data downloads
 
+Before downloading the data, download the summary .csv file (which also provides downlaod links) for inspection: 
+
+`https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4`
+
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
-[Uninjected PPE explant, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701803[accn])  
-[Uninjected PPE explant, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701805[accn])  
+[Uninjected PPE explant, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374055)  
+[Uninjected PPE explant, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374057)  
 [Uninjected PPE explant, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=317049)  
-[Uninjected PPE explant, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701807[accn])  
+[Uninjected PPE explant, treated with CHX+DEX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374058)  
 
-[PPE explanted after Six1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701799[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701808[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701800[accn])  
-[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701809[accn])  
+[PPE explanted after Six1 overexpression, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374051)  
+[PPE explanted after Six1 overexpression, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374059)  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374052)  
+[PPE explanted after Six1 overexpression, treated with CHX+DEX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374060)  
 
-[PPE explanted after Eya1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701810[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701812[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701811[accn])  
-[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701813[accn])  
+[PPE explanted after Eya1 overexpression, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374061)  
+[PPE explanted after Eya1 overexpression, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374063)  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374062)  
+[PPE explanted after Eya1 overexpression, treated with CHX+DEX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374064)  
 
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701814[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701801[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 1](https://www.ncbi.nlm.nih.gov/sra/srx1701815[accn])  
-[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 2](https://www.ncbi.nlm.nih.gov/sra/srx1701802[accn])  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374065)  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374053)  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374066)  
+[PPE explanted after Six1+Eya1 overexpression, treated with CHX+DEX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374054)  
 
 
 # Trimming and mapping 
