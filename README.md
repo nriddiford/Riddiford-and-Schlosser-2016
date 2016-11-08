@@ -71,7 +71,7 @@ The experiments described above, and in greater detail in the [methods section](
  
 ### Run Fastqc to visually inspect all sequencing results
 
-```fastq_quality_trimmer -t 30 -l 75 -i <input> -o <output>```
+```fastqc -i <input> -o <output_dir>```
 
 ### Run Trimmomatic to quality-filter reads
 
