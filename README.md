@@ -97,11 +97,10 @@ Run in same directory as `genome.fasta` file. For this analysis we used X.laevis
 
 ### Run Tophat2 on each set of paired reads
 
-``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <pe_1> <pe_2>```
+``` tophat2 -p 12 -r 250 -N 3 -o <ouput_dir> <bowtie-index> <paired_output_1> <paired_output_2>```
 
 Get stats for run and rename .bam file:
-
-```cd <output_dir>```  
+ 
 ```samtools flagstat accepted_hits.bam > stats.txt```  
 ```mv accepted_hits.bam <condition.rep.bam>```  
 
