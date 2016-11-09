@@ -6,7 +6,7 @@ library(ggplot2)
 library(gridExtra)
 
 # This script will take in qPCR dat arranged as follows: 
-# 		Gene	FC		expt	se
+# 	Gene	FC	expt	se
 # e.g.	Sox2	1.02	RNA-Seq	0
 
 # and produce two barplots one for six1 and one for eya1
