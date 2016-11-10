@@ -7,7 +7,6 @@
 # > source("scatterplot.grid.R")
 
 # Load pacakages
->>>>>>> External Changes
 library(reshape)
 library(ggplot2)
 require(gridExtra)
