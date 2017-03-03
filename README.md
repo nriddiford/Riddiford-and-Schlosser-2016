@@ -41,7 +41,7 @@ Please refer to the [methods section](https://elifesciences.org/content/5/e17666
 
 ### Data downloads
 
-Before downloading the data, download the [summary file](https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4) (which also provides downlaod links) for inspection.  
+Before downloading the data, download the [summary file](https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_27929955_130.14.18.97_5555_1476519991_1603242677_0MetA0_S_HStore&query_key=4) (which also provides download links) for inspection.  
 
 The experiments described above, and in greater detail in the [methods section](https://elifesciences.org/content/5/e17666) of the paper, genereated the following datasets:
 
@@ -92,7 +92,7 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 HEADCROP:12 MINLEN:36
 bowtie2-build <genome.fasta>
 ```
 
-Run in same directory as `genome.fasta` file. For this analysis we used X.laevis genome version [Xl7](http://www.xenbase.org/other/static/ftpDatafiles.jsp)
+Run in same directory as `genome.fasta` file. For this analysis we used *X.laevis* genome version [Xl7](http://www.xenbase.org/other/static/ftpDatafiles.jsp)
 
 
 ### Run Tophat2 on each set of paired reads
@@ -203,7 +203,7 @@ Perform chi squared test using output from **enrichment.pl** (e.g. use http://ww
 Run **godzilla.pl** for blast output for multiple conditions. 
 "Control" must always be listed first
 
-Blast output must have the following, tab delimited output:  
+Blast output must have the following, tab delimited format:  
 `gene	XLOC_control.fpkm:expt.fpkm,_Change:FC_val	%id	blast hit`
 
 ```perl godzilla.pl control.txt six.txt six-eya.txt eya.txt```
@@ -217,7 +217,7 @@ Run **DE_sig.pl**
 
 "Control" must always be listed first
 
-Blast output must have the following, tab delimited output:  
+Blast output must have the following, tab delimited format:  
 `gene	XLOC_control.fpkm:expt.fpkm,_Change:FC_val	%id	blast hit`
 
 ```perl DE_sig.pl control.txt six.txt six-eya.txt eya.txt```
