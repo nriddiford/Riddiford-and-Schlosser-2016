@@ -47,9 +47,8 @@ The experiments described above, and in greater detail in the [methods section](
 
 [Uninjected PPE explant, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374055)  
 [Uninjected PPE explant, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374057)  
- Uninjected PPE explant, treated with CHX+DEX rep 1  
+ [Uninjected PPE explant, treated with CHX+DEX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374056)  
 [Uninjected PPE explant, treated with CHX+DEX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374058)  
-
 [PPE explanted after Six1 overexpression, treated with CHX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374051)  
 [PPE explanted after Six1 overexpression, treated with CHX rep 2](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374059)  
 [PPE explanted after Six1 overexpression, treated with CHX+DEX rep 1](https://sra-download.ncbi.nlm.nih.gov/srapub/srr3374052)  
